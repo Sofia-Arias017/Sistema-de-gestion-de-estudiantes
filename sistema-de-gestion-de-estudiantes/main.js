@@ -12,4 +12,16 @@ let estudiante = { id, nombre, edad, notas, activo }
     console.log("Estudiante agregado:", estudiante)
 }
 
+function calcularPromedio() {
+let id = parseInt(prompt("Ingrese el ID del estudiante para calcular el promedio:"))
+let estudiante = estudiantes.find(est => est.id === id)
+    
+if (estudiante) {
+    let promedio = estudiante.notas.reduce((acc, nota) => acc + nota, 0) / estudiante.notas.length
+    console.log(`El promedio de ${estudiante.nombre} es: ${promedio.toFixed(2)}`)
+    } else {
+    console.log("Estudiante no encontrado.")
+    }
+}
+
 
