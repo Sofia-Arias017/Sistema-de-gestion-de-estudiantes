@@ -55,3 +55,23 @@ try {
     console.log("Error al importar datos JSON.")
     }
 }
+
+function menu() {
+let opcion
+do {
+    opcion = prompt(`Seleccione una opción:\n1. Agregar estudiante\n2. Calcular promedio\n3. Ver estudiantes activos\n4. Eliminar estudiante\n5. Exportar JSON\n6. Importar JSON\n7. Salir`)
+    switch (opcion) {
+        case "1": agregarEstudiante(); break
+        case "2": calcularPromedio(); break
+        case "3": estudiantesActivos(); break
+        case "4": eliminarEstudiante(); break
+        case "5": exportarEstudiantesJSON(); break
+        case "6": importarEstudiantesJSON(); break
+        case "7": console.log("Saliendo del sistema..."); break
+        default: console.log("Opción no válida. Intente de nuevo.")
+    }
+    } while (opcion !== "7")
+}
+
+menu()
+
