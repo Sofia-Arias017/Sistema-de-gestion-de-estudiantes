@@ -24,4 +24,8 @@ if (estudiante) {
     }
 }
 
+function estudiantesActivos() {
+let activos = estudiantes.filter(est => est.activo).map(est => est.nombre)
+    console.log("Estudiantes activos:", activos.length > 0 ? activos : "No hay estudiantes activos.")
+}
 
