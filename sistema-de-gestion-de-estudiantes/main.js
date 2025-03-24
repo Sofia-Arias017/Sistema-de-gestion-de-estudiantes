@@ -40,3 +40,8 @@ if (indice !== -1) {
     console.log("Estudiante no encontrado.")
     }
 }
+
+function exportarEstudiantesJSON() {
+let json = JSON.stringify(estudiantes, null, 2)
+    console.log("Datos exportados en JSON:", json)
+}
