@@ -29,3 +29,14 @@ let activos = estudiantes.filter(est => est.activo).map(est => est.nombre)
     console.log("Estudiantes activos:", activos.length > 0 ? activos : "No hay estudiantes activos.")
 }
 
+function eliminarEstudiante() {
+let id = parseInt(prompt("Ingrese el ID del estudiante que desea eliminar:"))
+let indice = estudiantes.findIndex(est => est.id === id)
+    
+if (indice !== -1) {
+    estudiantes.splice(indice, 1)
+    console.log("Estudiante eliminado correctamente.")
+    } else {
+    console.log("Estudiante no encontrado.")
+    }
+}
