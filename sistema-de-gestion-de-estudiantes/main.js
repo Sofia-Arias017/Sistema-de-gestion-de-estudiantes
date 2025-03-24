@@ -45,3 +45,13 @@ function exportarEstudiantesJSON() {
 let json = JSON.stringify(estudiantes, null, 2)
     console.log("Datos exportados en JSON:", json)
 }
+
+function importarEstudiantesJSON() {
+let json = prompt("Ingrese los datos JSON de los estudiantes:")
+try {
+    estudiantes = JSON.parse(json)
+    console.log("Datos importados correctamente.")
+    } catch (error) {
+    console.log("Error al importar datos JSON.")
+    }
+}
